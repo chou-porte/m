@@ -47,9 +47,3 @@ a.link {
     padding: 0.1em 1em;
     text-decoration: none;
 }
-
-nav ul li a:hover,
-a.link:hover {
-    background-color: var(--white);
-    color: var(--black);
-}

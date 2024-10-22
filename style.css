@@ -30,3 +30,26 @@ a {
     color: var(--black);
     transition: .5s all;
 }
+
+/* ナビゲーション */
+nav {
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+nav ul li a,
+a.link {
+    display: inline-block;
+    padding: 0.1em 1em;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+a.link:hover {
+    background-color: var(--white);
+    color: var(--black);
+}

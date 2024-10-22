@@ -11,7 +11,7 @@
 :root {
     --white: #ffffff;
     --black: #222;
-    --color: #d39c4c;
+    --color: #868f97;
 }
 
 /* 基本設定 */
@@ -27,7 +27,7 @@ body {
 
 /* リンク */
 a {
-    color: var(--black);
+    color: var(--color);
     transition: .5s all;
 }
 

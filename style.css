@@ -1,0 +1,15 @@
+CSS
+nav{
+  width: 700px;
+  background-color: pink;
+  display: flex;
+  justify-content: space-around;
+}
+ul{
+  width: 50%;
+ display: flex;
+ justify-content: space-around;
+}
+li{
+  list-style: none;
+}

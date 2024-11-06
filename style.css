@@ -1,3 +1,30 @@
+/* 全体に適用する */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+/* root */
+:root {
+    --color: #849d84;
+    --white: #ffffff;
+    --gray: #efefef;
+    --black: #888;
+}
+
+/* 基本設定 */
+body {
+    background-color: var(--white);
+    text-align: left;
+    line-height: 1.7;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+    font-family: "Zen Maru Gothic", serif;
+    color: var(--black);
+}
+
 /*ーーーーーーーーーー
 .header
 ーーーーーーーーーーー*/

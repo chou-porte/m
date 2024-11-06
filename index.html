@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
 <title>タイトル</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,5 +24,13 @@
     </ul>
   </nav>
 </header>
+  <script>
+    $(function () {
+  $('#js-hamburger-menu, .navigation__link').on('click', function () {
+    $('.navigation').slideToggle(500)
+    $('.hamburger-menu').toggleClass('hamburger-menu--open')
+  });
+});
+  </script>
 </body>
 </html>

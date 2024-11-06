@@ -1,85 +1,68 @@
-.header {
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+@charset "UTF-8";
+html{
+    font-size:100%;/*ユーザー設定の文字サイズを正しく反映*/
 }
-.logo {
-  font-weight: 700;
-  padding-left: 14px;
+*{
+    box-sizing:border-box;
 }
-.hamburger-menu {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  border: none;
-  background: transparent;
-  appearance: none;
-  padding: 0;
-  cursor: pointer;
+img{
+    max-width:100%;/*画像が親要素からはみ出すのを防ぐ*/
+    height:auto;
 }
-.hamburger-menu__bar {
-  display: inline-block;
-  width: 44%;
-  height: 2px;
-  background: #242424;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: .5s;
+body{
+    background-color:#fff;
+    margin:0;
+    padding:0;
 }
-.hamburger-menu__bar:first-child {
-  top: 16px;
+
+header{
+    width:100%;
+    background-color:#d3d3d3;
+    display:flex;
+    justify-content:space-between; /*メニューを右端に置く方法その１（※）*/
+    padding:0 2%;
+    align-items:center; /*垂直中央に整列*/
+　　　position:fixed;  /*ヘッダーの位置を固定*/
+    top:0;  /*ヘッダーの位置を固定（上0）*/
+    left:0; /*ヘッダーの位置を左固定（左０）*/
 }
-.hamburger-menu__bar:nth-child(2) {
-  top: 24px;
+ul{
+    display:flex;
+    list-style:none;
 }
-.hamburger-menu__bar:last-child {
-  top: 32px;
+li{
+    margin-left:40px;
 }
-.hamburger-menu--open .hamburger-menu__bar {
-  top: 50%;
+a{
+    text-decoration:none;
+    color:#333;
 }
-.hamburger-menu--open .hamburger-menu__bar:first-child {
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+nav{
+    margin-left:auto; /*メニューを右端に置く方法その２（※）*/
 }
-.hamburger-menu--open .hamburger-menu__bar:last-child {
-  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+a:hover{
+    opacity: 0.5;
 }
-.hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
-  display: none;
+
+@media screen and (max-width:767px){ 
+header{
+    flex-direction: column;
+    padding:4% 2%;
 }
-.navigation {
-  display: none;
-  background: #242424;
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  z-index: 9999;
+
+nav,ul{
+    width:100%;
+    margin:0;
+    padding:0;
+    flex-direction: column;
 }
-.navigation__list {
-  text-align: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+li{
+    margin:0;
+    text-align:center;
 }
-.navigation__list-item {
-  border-bottom: solid 1px #474747;
+a{
+    display:block;
+　　　　padding:8px;
 }
-.navigation__list-item:first-child {
-  border-top: solid 1px #474747;
-}
-.navigation__link {
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  display: block;
-  padding: 24px 0;
-  transition: .5s;
-}
-@media (hover: hover) and (pointer: fine) {
-  .navigation__link:hover {
-    background: #333;
-  }
-}
+} ←忘れずに
